@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="avatar-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e2e" />
+      <stop offset="100%" stop-color="#11111b" />
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <rect width="200" height="200" rx="100" fill="url(#bg-grad)" />
+  <circle cx="100" cy="100" r="94" fill="none" stroke="url(#avatar-grad)" stroke-width="4" stroke-dasharray="8 4" />
+  
+  <!-- Head / Avatar Silhouette -->
+  <circle cx="100" cy="75" r="36" fill="url(#avatar-grad)" opacity="0.9" />
+  <path d="M40 170 C40 125, 65 115, 100 115 C135 115, 160 125, 160 170 Z" fill="url(#avatar-grad)" opacity="0.85" />
+  
+  <!-- Tech Accent Badge -->
+  <circle cx="145" cy="145" r="20" fill="#1e1e2e" stroke="#06b6d4" stroke-width="2" />
+  <text x="145" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#38bdf8" text-anchor="middle">&lt;/&gt;</text>
+</svg>

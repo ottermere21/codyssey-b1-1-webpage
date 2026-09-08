@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="순수 웹 기술(HTML5, CSS3, JavaScript)로 완성한 반응형 웹 포트폴리오입니다.">
+  <title>ottermere21 | 나를 소개하는 웹페이지</title>
+  
+  <!-- Google Fonts: Inter & Outfit & Noto Sans KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Main JavaScript (defer 속성으로 문서 파싱 후 실행) -->
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <!-- 네비게이션 헤더 -->
+  <header id="header" class="site-header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="홈으로 이동">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-text">ottermere21</span>
+      </a>
+
+      <!-- 네비게이션 메뉴 (데스크톱/모바일) -->
+      <nav id="navbar" class="nav-menu" aria-label="주요 내비게이션">
+        <ul class="nav-list" id="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link">Hero</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- 우측 컨트롤 (다크모드 토글 & 햄버거 메뉴 버튼) -->
+      <div class="nav-actions">
+        <button type="button" id="theme-toggle" class="theme-btn" aria-label="테마 전환 (다크/라이트 모드)">
+          <i class="fa-solid fa-moon theme-icon" aria-hidden="true"></i>
+        </button>
+        <button type="button" id="menu-toggle" class="hamburger-btn" aria-label="모바일 메뉴 열기/닫기" aria-expanded="false" aria-controls="navbar">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 메인 콘텐츠 영역 (6대 필수 섹션) -->
+  <main id="main-content">
+    <!-- 1. Hero 섹션 -->
+    <section id="hero" class="hero-section section">
+      <div class="container hero-container">
+        <div class="hero-text-content">
+          <div class="badge-pill">
+            <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+            <span>Front-end Developer</span>
+          </div>
+          <h1 class="hero-title">
+            안녕하세요, 웹의 가치를 만드는 <br>
+            <span class="gradient-text">ottermere21</span>입니다.
+          </h1>
+          <p class="hero-desc">
+            순수 HTML5, CSS3, JavaScript를 바탕으로 탄탄한 웹 표준과 직관적인 사용자 경험(UX)을 구축합니다.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>프로젝트 보기</span>
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>문의하기</span>
+              <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About 섹션 -->
+    <section id="about" class="about-section section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">배움과 성장을 즐기는 개발자입니다</p>
+        </div>
+        <div class="about-content">
+          <div class="about-image-card">
+            <img src="images/profile.svg" alt="개발자 ottermere21 프로필 일러스트" class="profile-avatar" width="220" height="220">
+          </div>
+          <div class="about-info-card">
+            <h3 class="about-greeting">기본에 충실하며 문제를 집요하게 파고듭니다</h3>
+            <p class="about-paragraph">
+              프레임워크의 편리함 이전에 <strong>"브라우저는 어떻게 동작하고 코드는 어떻게 화면이 되는가"</strong>에 대한 깊은 이해를 지향합니다.
+            </p>
+            <p class="about-paragraph">
+              DOM 조작, 비동기 통신, 상태 기반 화면 렌더링의 기본 원리를 확실히 체득하며, 사용자가 편안하게 머무를 수 있는 인터랙티브 웹 환경을 만들어가고 있습니다.
+            </p>
+            <ul class="about-details-list">
+              <li>
+                <i class="fa-solid fa-user-tag" aria-hidden="true"></i>
+                <span><strong>아이디:</strong> ottermere21</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                <span><strong>관심 분야:</strong> Web Core, Responsive Design, State Architecture</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <span><strong>위치:</strong> 대한민국 (Republic of Korea)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Skills 섹션 -->
+    <section id="skills" class="skills-section section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Skills</h2>
+          <p class="section-subtitle">사용자에게 가치 있는 경험을 제공하는 핵심 기술 스택</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <div class="skill-icon-wrap" style="--accent-color: #e34f26;">
+              <i class="fa-brands fa-html5" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-title">HTML5</h3>
+            <p class="skill-desc">웹 표준을 준수하는 시맨틱 마크업과 웹 접근성(a11y) 중심의 문서 구조 설계</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon-wrap" style="--accent-color: #1572b6;">
+              <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-title">CSS3</h3>
+            <p class="skill-desc">CSS 변수 기반 테마 시스템, Flexbox 및 CSS Grid를 활용한 모바일 퍼스트 반응형 레이아웃</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon-wrap" style="--accent-color: #f7df1e;">
+              <i class="fa-brands fa-js" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-title">JavaScript (ES6+)</h3>
+            <p class="skill-desc">화살표 함수, 비동기(async/await), DOM 조작 및 이벤트 기반 상태-렌더링 아키텍처</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon-wrap" style="--accent-color: #f05032;">
+              <i class="fa-brands fa-git-alt" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-title">Git & GitHub</h3>
+            <p class="skill-desc">체계적인 버전 관리, 브랜치 전략, GitHub Pages를 통한 안정적인 정적 사이트 배포</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon-wrap" style="--accent-color: #06b6d4;">
+              <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-title">Responsive Web</h3>
+            <p class="skill-desc">모바일, 태블릿, 데스크톱 등 다양한 디바이스 환경에 유연하게 대응하는 반응형 설계</p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon-wrap" style="--accent-color: #8b5cf6;">
+              <i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-title">Fetch API & State</h3>
+            <p class="skill-desc">REST API 비동기 통신 및 로딩/성공/실패/빈 데이터 4대 상태에 따른 화면 렌더링</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Projects 섹션 (GitHub API 연동) -->
+    <section id="projects" class="projects-section section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Projects</h2>
+          <p class="section-subtitle">GitHub API를 통해 실시간으로 연동되는 공개 저장소 목록입니다</p>
+        </div>
+
+        <!-- 상태 컨테이너 (로딩, 성공, 에러, 빈 상태) -->
+        <div id="projects-container" class="projects-container">
+          <!-- 로딩 상태 -->
+          <div id="projects-loading" class="state-message" role="status">
+            <div class="spinner" aria-hidden="true"></div>
+            <p class="state-text">GitHub 저장소를 불러오는 중입니다...</p>
+          </div>
+
+          <!-- 에러 상태 -->
+          <div id="projects-error" class="state-message hidden" role="alert">
+            <i class="fa-solid fa-circle-exclamation state-icon error-icon" aria-hidden="true"></i>
+            <p class="state-text">프로젝트를 불러올 수 없습니다.</p>
+            <p class="state-subtext">일시적인 네트워크 문제이거나 요청 한도를 초과했을 수 있습니다.</p>
+            <button type="button" id="retry-btn" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
+              <span>다시 시도</span>
+            </button>
+          </div>
+
+          <!-- 빈 데이터 상태 -->
+          <div id="projects-empty" class="state-message hidden">
+            <i class="fa-regular fa-folder-open state-icon" aria-hidden="true"></i>
+            <p class="state-text">표시할 프로젝트가 없습니다.</p>
+          </div>
+
+          <!-- 성공 상태 (카드 리스트 그리드) -->
+          <div id="projects-grid" class="projects-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Contact 섹션 -->
+    <section id="contact" class="contact-section section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">새로운 기회나 협업 제안, 궁금한 점은 언제든지 문의해주세요</p>
+        </div>
+
+        <div class="contact-container">
+          <form id="contact-form" class="contact-form" novalidate>
+            <!-- 이름 필드 -->
+            <div class="form-group">
+              <label for="name" class="form-label">
+                <span>이름</span>
+                <span class="required-badge" aria-label="필수 입력">*</span>
+              </label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="이름을 입력해주세요" autocomplete="name" required>
+              <span id="name-error" class="error-msg" aria-live="polite"></span>
+            </div>
+
+            <!-- 이메일 필드 -->
+            <div class="form-group">
+              <label for="email" class="form-label">
+                <span>이메일</span>
+                <span class="required-badge" aria-label="필수 입력">*</span>
+              </label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="example@email.com" autocomplete="email" required>
+              <span id="email-error" class="error-msg" aria-live="polite"></span>
+            </div>
+
+            <!-- 메시지 필드 -->
+            <div class="form-group">
+              <label for="message" class="form-label">
+                <span>메시지</span>
+                <span class="required-badge" aria-label="필수 입력">*</span>
+              </label>
+              <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="문의하실 내용을 자세히 적어주세요" required></textarea>
+              <span id="message-error" class="error-msg" aria-live="polite"></span>
+            </div>
+
+            <!-- 제출 버튼 -->
+            <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
+              <span>메시지 전송</span>
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            </button>
+
+            <!-- 제출 성공 안내 메시지 -->
+            <div id="form-success-msg" class="form-alert form-success hidden" role="alert">
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+              <span>메시지가 성공적으로 전송되었습니다! 확인 후 회신드리겠습니다.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6. Footer 섹션 -->
+  <footer id="footer" class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-info">
+        <p class="copyright">
+          © <span id="current-year">2026</span> <strong>ottermere21</strong>. All rights reserved.
+        </p>
+        <p class="footer-sub">순수 HTML5, CSS3, Vanilla JS로 제작되었습니다.</p>
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/ottermere21" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub 프로필 방문">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:contact@example.com" class="social-link" aria-label="이메일 보내기">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 맨 위로 이동 (Scroll To Top) 버튼 -->
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="페이지 맨 위로 이동">
+    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+  </button>
+</body>
+</html>
