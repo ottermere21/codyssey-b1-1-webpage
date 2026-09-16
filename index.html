@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="ko" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="순수 웹 기술(HTML5, CSS3, JavaScript)로 완성한 반응형 웹 포트폴리오입니다.">
-  <title>ottermere21 | 나를 소개하는 웹페이지</title>
-  
+  <meta name="description" content="HTML5, CSS3, JavaScript만 사용하여 만든 반응형 웹 포트폴리오입니다.">
+  <title>ottermere21 | 포트폴리오 웹페이지</title>
+
   <!-- Google Fonts: Inter & Outfit & Noto Sans KR -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-  
+
   <!-- Main JavaScript (defer 속성으로 문서 파싱 후 실행) -->
   <script defer src="js/main.js"></script>
 </head>
+
 <body>
   <!-- 네비게이션 헤더 -->
   <header id="header" class="site-header">
     <div class="nav-container">
       <a href="#hero" class="brand-logo" aria-label="홈으로 이동">
         <span class="logo-symbol">&lt;/&gt;</span>
-        <span class="logo-text">ottermere21</span>
+        <span class="logo-text">Kim Youngshin</span>
       </a>
 
       <!-- 네비게이션 메뉴 (데스크톱/모바일) -->
@@ -45,7 +51,8 @@
         <button type="button" id="theme-toggle" class="theme-btn" aria-label="테마 전환 (다크/라이트 모드)">
           <i class="fa-solid fa-moon theme-icon" aria-hidden="true"></i>
         </button>
-        <button type="button" id="menu-toggle" class="hamburger-btn" aria-label="모바일 메뉴 열기/닫기" aria-expanded="false" aria-controls="navbar">
+        <button type="button" id="menu-toggle" class="hamburger-btn" aria-label="모바일 메뉴 열기/닫기" aria-expanded="false"
+          aria-controls="navbar">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -62,14 +69,14 @@
         <div class="hero-text-content">
           <div class="badge-pill">
             <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
-            <span>Front-end Developer</span>
+            <span>Developer</span>
           </div>
           <h1 class="hero-title">
-            안녕하세요, 웹의 가치를 만드는 <br>
-            <span class="gradient-text">ottermere21</span>입니다.
+            안녕하세요 <br>
+            <span class="gradient-text">안녕하세요</span>안녕하세요
           </h1>
           <p class="hero-desc">
-            순수 HTML5, CSS3, JavaScript를 바탕으로 탄탄한 웹 표준과 직관적인 사용자 경험(UX)을 구축합니다.
+            테스트입니다.
           </p>
           <div class="hero-cta-group">
             <a href="#projects" class="btn btn-primary">
@@ -90,11 +97,11 @@
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">About Me</h2>
-          <p class="section-subtitle">배움과 성장을 즐기는 개발자입니다</p>
+          <p class="section-subtitle">안녕하세요. 김영신입니다.</p>
         </div>
         <div class="about-content">
           <div class="about-image-card">
-            <img src="images/profile.svg" alt="개발자 ottermere21 프로필 일러스트" class="profile-avatar" width="220" height="220">
+            <img src="images/profile.svg" alt="김영신 프로필 일러스트" class="profile-avatar" width="220" height="220">
           </div>
           <div class="about-info-card">
             <h3 class="about-greeting">기본에 충실하며 문제를 집요하게 파고듭니다</h3>
@@ -128,8 +135,8 @@
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Skills</h2>
-          <p class="section-subtitle">사용자에게 가치 있는 경험을 제공하는 핵심 기술 스택</p>
         </div>
+
         <div class="skills-grid">
           <article class="skill-card">
             <div class="skill-icon-wrap" style="--accent-color: #e34f26;">
@@ -232,7 +239,8 @@
                 <span>이름</span>
                 <span class="required-badge" aria-label="필수 입력">*</span>
               </label>
-              <input type="text" id="name" name="name" class="form-input" placeholder="이름을 입력해주세요" autocomplete="name" required>
+              <input type="text" id="name" name="name" class="form-input" placeholder="이름을 입력해주세요" autocomplete="name"
+                required>
               <span id="name-error" class="error-msg" aria-live="polite"></span>
             </div>
 
@@ -242,7 +250,8 @@
                 <span>이메일</span>
                 <span class="required-badge" aria-label="필수 입력">*</span>
               </label>
-              <input type="email" id="email" name="email" class="form-input" placeholder="example@email.com" autocomplete="email" required>
+              <input type="email" id="email" name="email" class="form-input" placeholder="example@email.com"
+                autocomplete="email" required>
               <span id="email-error" class="error-msg" aria-live="polite"></span>
             </div>
 
@@ -252,7 +261,8 @@
                 <span>메시지</span>
                 <span class="required-badge" aria-label="필수 입력">*</span>
               </label>
-              <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="문의하실 내용을 자세히 적어주세요" required></textarea>
+              <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="문의하실 내용을 자세히 적어주세요"
+                required></textarea>
               <span id="message-error" class="error-msg" aria-live="polite"></span>
             </div>
 
@@ -283,7 +293,8 @@
         <p class="footer-sub">순수 HTML5, CSS3, Vanilla JS로 제작되었습니다.</p>
       </div>
       <div class="social-links">
-        <a href="https://github.com/ottermere21" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub 프로필 방문">
+        <a href="https://github.com/ottermere21" target="_blank" rel="noopener noreferrer" class="social-link"
+          aria-label="GitHub 프로필 방문">
           <i class="fa-brands fa-github" aria-hidden="true"></i>
         </a>
         <a href="mailto:contact@example.com" class="social-link" aria-label="이메일 보내기">
@@ -298,4 +309,20 @@
     <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
   </button>
 </body>
+
 </html>
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+└── <html lang="ko" data-theme="light">
+    ├── <head> : 문서 설정, 메타 정보, 폰트/아이콘, CSS/JS 연결
+    └── <body> : 화면에 실제로 보이는 영역
+        ├── <header> : 로고, 내비게이션 바, 다크모드/햄버거 버튼
+        ├── <main>   : 핵심 콘텐츠 (Hero, About, Skills, Projects, Contact)
+        ├── <footer> : 저작권 정보, SNS 링크
+        └── <button> : 맨 위로 가기(Scroll To Top) 플로팅 버튼
+
+-->

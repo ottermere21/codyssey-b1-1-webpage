@@ -2,43 +2,43 @@
    Design Tokens & CSS Variables (:root & Dark Theme)
    ========================================================================== */
 :root {
-  /* Color Palette - Light Mode */
-  --bg-color: #f8fafc;
+  /* Color Palette - Light Mode (Pastel Pink) */
+  --bg-color: #fff5f7;
   --surface-color: #ffffff;
-  --surface-alt: #f1f5f9;
-  --surface-hover: #e2e8f0;
-  
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
-  
-  --primary-color: #4f46e5;
-  --primary-hover: #4338ca;
-  --primary-light: #e0e7ff;
-  --primary-rgb: 79, 70, 229;
-  
-  --accent-cyan: #06b6d4;
-  --border-color: #e2e8f0;
-  --border-focus: #4f46e5;
-  
+  --surface-alt: #fce7f3;
+  --surface-hover: #fbcfe8;
+
+  --text-primary: #381c2a;
+  --text-secondary: #754862;
+  --text-muted: #a57d95;
+
+  --primary-color: #ec4899;
+  --primary-hover: #db2777;
+  --primary-light: #fdf2f8;
+  --primary-rgb: 236, 72, 153;
+
+  --accent-cyan: #fb7185;
+  --border-color: #fbcfe8;
+  --border-focus: #ec4899;
+
   --error-color: #ef4444;
   --error-bg: #fef2f2;
   --success-color: #10b981;
   --success-bg: #ecfdf5;
-  
+
   /* Shadows */
-  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --card-shadow-hover: 0 20px 25px -5px rgba(79, 70, 229, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
-  --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  
+  --card-shadow: 0 4px 12px -2px rgba(236, 72, 153, 0.08), 0 2px 6px -2px rgba(0, 0, 0, 0.04);
+  --card-shadow-hover: 0 20px 25px -5px rgba(236, 72, 153, 0.18), 0 8px 10px -6px rgba(236, 72, 153, 0.06);
+  --nav-shadow: 0 4px 20px rgba(236, 72, 153, 0.08);
+
   /* Header blur & background */
-  --header-bg: rgba(248, 250, 252, 0.85);
+  --header-bg: rgba(255, 245, 247, 0.85);
   --header-scrolled-bg: rgba(255, 255, 255, 0.95);
-  
+
   /* Typography */
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  
+
   /* Spacing & Transitions */
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -46,48 +46,50 @@
   --radius-md: 12px;
   --radius-lg: 18px;
   --radius-full: 9999px;
-  
+
   /* Header Height */
   --header-height: 70px;
 }
 
-/* Dark Mode Theme */
+/* Dark Mode Theme (Midnight Mauve & Pastel Pink) */
 [data-theme="dark"] {
-  --bg-color: #0b0f19;
-  --surface-color: #111827;
-  --surface-alt: #1e293b;
-  --surface-hover: #26334a;
-  
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #64748b;
-  
-  --primary-color: #6366f1;
-  --primary-hover: #818cf8;
-  --primary-light: rgba(99, 102, 241, 0.15);
-  --primary-rgb: 99, 102, 241;
-  
-  --accent-cyan: #38bdf8;
-  --border-color: #1f293d;
-  --border-focus: #818cf8;
-  
+  --bg-color: #180e18;
+  --surface-color: #241424;
+  --surface-alt: #361b34;
+  --surface-hover: #482446;
+
+  --text-primary: #fdf2f8;
+  --text-secondary: #e5b8d0;
+  --text-muted: #9c718a;
+
+  --primary-color: #f472b6;
+  --primary-hover: #f9a8d4;
+  --primary-light: rgba(244, 114, 182, 0.16);
+  --primary-rgb: 244, 114, 182;
+
+  --accent-cyan: #fda4af;
+  --border-color: #3d1f3b;
+  --border-focus: #f472b6;
+
   --error-color: #f87171;
   --error-bg: rgba(239, 68, 68, 0.12);
   --success-color: #34d399;
   --success-bg: rgba(16, 185, 129, 0.12);
-  
-  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
-  --card-shadow-hover: 0 20px 25px -5px rgba(99, 102, 241, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
-  --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  
-  --header-bg: rgba(11, 15, 25, 0.85);
-  --header-scrolled-bg: rgba(17, 24, 39, 0.95);
+
+  --card-shadow: 0 4px 12px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(244, 114, 182, 0.08);
+  --card-shadow-hover: 0 20px 25px -5px rgba(244, 114, 182, 0.22), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+  --header-bg: rgba(24, 14, 24, 0.85);
+  --header-scrolled-bg: rgba(36, 20, 36, 0.95);
 }
 
 /* ==========================================================================
    Base & Reset Styles
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -326,9 +328,11 @@ ul {
 .hamburger-btn.active .bar:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
+
 .hamburger-btn.active .bar:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger-btn.active .bar:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
@@ -371,7 +375,8 @@ ul {
   transition: color var(--transition-fast);
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: var(--primary-color);
 }
 
@@ -385,6 +390,7 @@ ul {
   padding-top: calc(var(--header-height) + 2rem);
   padding-bottom: 4rem;
   position: relative;
+  background: radial-gradient(circle at 50% 25%, rgba(var(--primary-rgb), 0.12) 0%, transparent 65%);
 }
 
 .hero-container {
@@ -405,6 +411,7 @@ ul {
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
 }
 
 .hero-title {
@@ -622,8 +629,13 @@ ul {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Projects Card Grid */
@@ -758,7 +770,8 @@ ul {
   color: var(--error-color);
 }
 
-.form-input, .form-textarea {
+.form-input,
+.form-textarea {
   width: 100%;
   padding: 0.85rem 1rem;
   font-family: inherit;
@@ -771,12 +784,14 @@ ul {
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.form-input:focus, .form-textarea:focus {
+.form-input:focus,
+.form-textarea:focus {
   border-color: var(--border-focus);
   box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.15);
 }
 
-.form-input.invalid, .form-textarea.invalid {
+.form-input.invalid,
+.form-textarea.invalid {
   border-color: var(--error-color);
   background-color: var(--error-bg);
 }
