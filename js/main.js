@@ -124,27 +124,31 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
 
       case 'success': {
-        // map()과 템플릿 리터럴을 활용한 동적 카드 렌더링
-        // repos 데이터 배열을 map으로 순회하며 HTML 카드 문자열 배열로 변환
-        const cardsHTML = projectsState.repos.map((repo) => {
-          // 구조 분해 할당: repo 객체 내부의 속성들을 개별 변수로 가져옴
-          // stargazers_count -> stars로 할당
-          // html_url -> repoUrl로 할당
-          const {
-            name,
-            description,
-            stargazers_count: stars,
-            language,
-            html_url: repoUrl
-          } = repo;
+        // filter(), map(), join()을 활용한 함수형 데이터 처리 파이프라인
+        // 1. filter(): Fork(가져온) 저장소는 제외하고 본인의 원본 저장소만 선별
+        // 2. map(): 선별된 저장소 객체를 HTML 카드 템플릿 문자열로 변환
+        // 3. join(): 문자열 배열을 단 하나의 긴 HTML 문자열로 병합
+        const cardsHTML = projectsState.repos
+          .filter((repo) => !repo.fork)
+          .map((repo) => {
+            // 구조 분해 할당: repo 객체 내부의 속성들을 개별 변수로 가져옴
+            // stargazers_count -> stars로 할당
+            // html_url -> repoUrl로 할당
+            const {
+              name,
+              description,
+              stargazers_count: stars,
+              language,
+              html_url: repoUrl
+            } = repo;
 
-          // description이 null or undefined이면 기본 대체 문구 할당
-          const descText = description ? description : '설명이 등록되지 않은 저장소입니다.';
-          // language가 null or undefined이면 기본 대체 문구 할당
-          const langText = language ? language : 'General';
+            // description이 null or undefined이면 기본 대체 문구 할당
+            const descText = description ? description : '설명이 등록되지 않은 저장소입니다.';
+            // language가 null or undefined이면 기본 대체 문구 할당
+            const langText = language ? language : 'General';
 
-          // 프로젝트 카드의 HTMl 문자열을 백틱(템플릿 리터럴)을 이용해 dynamic하게 생성하여 리턴
-          return `
+            // 프로젝트 카드의 HTMl 문자열을 백틱(템플릿 리터럴)을 이용해 dynamic하게 생성하여 리턴
+            return `
             <article class="project-card">
               <div class="project-card-header">
                 <!-- 폴더 아이콘 -->
@@ -172,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
             </article>
           `;
-        }).join(''); // 생성된 HTML 문자열 배열을 하나의 긴 문자열로 이어 붙임
+          }).join(''); // 생성된 HTML 문자열 배열을 하나의 긴 문자열로 이어 붙임
 
         // 완성된 카드 HTMl 문자열을 화면(DOM) 그리드 요소에 추가
         projectsGrid.innerHTML = cardsHTML;
