@@ -7,38 +7,38 @@
   --surface-color: #ffffff;
   --surface-alt: #f1f5f9;
   --surface-hover: #e2e8f0;
-  
+
   --text-primary: #0f172a;
   --text-secondary: #475569;
   --text-muted: #94a3b8;
-  
+
   --primary-color: #4f46e5;
   --primary-hover: #4338ca;
   --primary-light: #e0e7ff;
   --primary-rgb: 79, 70, 229;
-  
+
   --accent-cyan: #06b6d4;
   --border-color: #e2e8f0;
   --border-focus: #4f46e5;
-  
+
   --error-color: #ef4444;
   --error-bg: #fef2f2;
   --success-color: #10b981;
   --success-bg: #ecfdf5;
-  
+
   /* Shadows */
   --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
   --card-shadow-hover: 0 20px 25px -5px rgba(79, 70, 229, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
   --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  
+
   /* Header blur & background */
   --header-bg: rgba(248, 250, 252, 0.85);
   --header-scrolled-bg: rgba(255, 255, 255, 0.95);
-  
+
   /* Typography */
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  
+
   /* Spacing & Transitions */
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -46,7 +46,7 @@
   --radius-md: 12px;
   --radius-lg: 18px;
   --radius-full: 9999px;
-  
+
   /* Header Height */
   --header-height: 70px;
 }
@@ -57,29 +57,29 @@
   --surface-color: #111827;
   --surface-alt: #1e293b;
   --surface-hover: #26334a;
-  
+
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
   --text-muted: #64748b;
-  
+
   --primary-color: #6366f1;
   --primary-hover: #818cf8;
   --primary-light: rgba(99, 102, 241, 0.15);
   --primary-rgb: 99, 102, 241;
-  
+
   --accent-cyan: #38bdf8;
   --border-color: #1f293d;
   --border-focus: #818cf8;
-  
+
   --error-color: #f87171;
   --error-bg: rgba(239, 68, 68, 0.12);
   --success-color: #34d399;
   --success-bg: rgba(16, 185, 129, 0.12);
-  
+
   --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
   --card-shadow-hover: 0 20px 25px -5px rgba(99, 102, 241, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
   --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  
+
   --header-bg: rgba(11, 15, 25, 0.85);
   --header-scrolled-bg: rgba(17, 24, 39, 0.95);
 }
@@ -87,7 +87,9 @@
 /* ==========================================================================
    Base & Reset Styles
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -326,9 +328,11 @@ ul {
 .hamburger-btn.active .bar:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
+
 .hamburger-btn.active .bar:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger-btn.active .bar:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
@@ -371,7 +375,8 @@ ul {
   transition: color var(--transition-fast);
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: var(--primary-color);
 }
 
@@ -543,9 +548,26 @@ ul {
   align-items: center;
   justify-content: center;
   font-size: 1.75rem;
-  color: var(--accent-color, var(--primary-color));
+  color: var(--primary-color);
   margin-bottom: 1.25rem;
   transition: transform var(--transition-fast);
+}
+
+/* Individual skill brand colors */
+.skill-icon-wrap.icon-html5 {
+  color: #e34f26;
+}
+
+.skill-icon-wrap.icon-css3 {
+  color: #1572b6;
+}
+
+.skill-icon-wrap.icon-js {
+  color: #f7df1e;
+}
+
+.skill-icon-wrap.icon-git {
+  color: #f05032;
 }
 
 .skill-card:hover .skill-icon-wrap {
@@ -622,8 +644,13 @@ ul {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Projects Card Grid */
@@ -758,7 +785,8 @@ ul {
   color: var(--error-color);
 }
 
-.form-input, .form-textarea {
+.form-input,
+.form-textarea {
   width: 100%;
   padding: 0.85rem 1rem;
   font-family: inherit;
@@ -771,12 +799,14 @@ ul {
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.form-input:focus, .form-textarea:focus {
+.form-input:focus,
+.form-textarea:focus {
   border-color: var(--border-focus);
   box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.15);
 }
 
-.form-input.invalid, .form-textarea.invalid {
+.form-input.invalid,
+.form-textarea.invalid {
   border-color: var(--error-color);
   background-color: var(--error-bg);
 }
