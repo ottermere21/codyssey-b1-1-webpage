@@ -1,5 +1,6 @@
 # CONCEPT.md
 
+
 ## 1. HTML (Hypertext Markup Language)
 - 웹을 이루는 가장 기초적인 구성 요소. 웹 콘텐츠의 의미와 구조 정의
 
@@ -13,17 +14,45 @@
 
 
 ## HTML 요소
-- `<!DOCTYPE html>`:  이 문서가 HTML5로 작성되었음을 선언
-- `<html> </html>`:
-- `<head> </head>`: 
-- `<meta charset="utf-8">`:
-- `<meta name="viewport" content="width=device-width">`:
-- `<title> </title>`:
-- `<body> </body>: 
+- `<!DOCTYPE html>`: 이 문서가 HTML5로 작성되었음을 선언
+- `<html> </html>`: 문서의 최상위 루트 요소. 웹페이지의 모든 콘텐츠가 이 태그 안에 들어감
+
+- `<head> </head>`: 문서에 대한 메타데이터(제목, 문자 인코딩, 스타일시트, 스크립트 연결 등)를 정의. 사용자에게 직접 보이지 않음
+    - `<meta charset="utf-8">`: 웹 브라우저에 표시할 문자 인코딩을 UTF-8로 설정
+    - `<meta name="viewport" content="width=device-width">`: 모바일 반응형 웹을 위한 필수 설정.기기의 가로폭(width=device-width)에 화면을 맞추고, 처음 열었을 때 확대/축소 비율을 1:1(initial-scale=1.0)로 맞춤
+    - `<title> </title>`: 웹 브라우저 탭에 표시될 문서의 제목
+- `<body> </body>`: 웹 브라우저 화면에 실제로 보이는 모든 콘텐츠가 들어가는 부분
 
 ## 시맨틱 태그
 - `<h1> ~ <h6>`: 제목 태그
 
+
+- <a> </a>: 앵커 태그. 다른 페이지로 이동, 같은 페이지 내의 다른 위치로 이동 등 하이퍼링크를 생성하는 인라인 태그
+- <nav> </nav>: 네비게이션 메뉴를 감싸는 태그
+- <ul> </ul>: 순서 없는 목록
+- <li> </li>: ul, ol 목록의 각 항목을 나타내는 요소
+
+- <span> </span>: 특별한 의미 없이 텍스트, 아이콘 등 인라인 콘텐츠를 감싸는 용도
+
+- <main> </main>: 메인 콘텐츠 영역. 페이지의 핵심 내용을 담는 블록 레벨 요소
+
+
+- rel: 링크할 문서의 종류
+    - stylesheet: 스타일시트
+    - icon: 아이콘
+    - next: 다음 페이지
+    - prev: 이전 페이지
+- href: 링크할 주소
+- crossorigin: 
+
+
+- aria-label: 스크린 리더를 사용하는 사용자들에게 링크의 목적지를 더 명확하게 전달하는 속성
+- aria-hidden: 스크린 리더가 특정 요소를 무시하도록 설정
+- aria-controls: 요소가 어떤 요소를 제어하는지 나타냄
+- aria-expanded: 요소가 확장되었는지 여부를 나타냄
+- aria-current: 요소가 현재 페이지인지 여부를 나타냄
+
+    
 
 ## 2. CSS (Cascading Style Sheets)
 - 웹 페이지의 모양/표현
@@ -31,3 +60,79 @@
 
 ## 3. JS (JavaScript)
 - 웹 페이지의 기능/동작
+- `var` 대신 `const`, `let` 쓰는 이유
+- await와 async
+    - await: 비동기 함수 코드 앞에 붙이면, 그 코드가 끝날 때까지 기다림
+    - async: 함수 앞에 붙여, 비동기 코드를 사용할 수 있음을 알림
+
+- try-catch-finally 구조: 비동기 함수에서 발생한 에러를 감지, 처리, 마무리 작업을 할 수 있도록 하는 구조
+
+- HTML에 `onclick` 대신 `addEventListener` 사용하는 이유
+
+
+================
+
+
+- DOM(Document Object Model): 문서 객체 모델. HTML/XML 문서를 브라우저가 이해하고 제어할 수 있도록 트리 구조의 객체로 변환한 프로그래밍 인터페이스. 쉽게 말해 HTML과 JS의 연결 다리
+    - Document: 웹 페이저에 로드된 HTML 문서
+    - Object: JS가 제어할 수 있는 형태로 변환된 HTML 요소
+    - Model: HTML 문서의 구조를 부모-자식 관계를 가진 트리 구조로 표현함
+    - DOM이 필요한 이유: HTML은 정적인 문서지만, JS는 동적으로 웹 페이지를 조작할 수 있어야 함. DOM은 HTML 문서의 구조를 트리 구조로 표현하여 JS가 HTML 요소를 선택하고, 조작하고, 이벤트를 처리할 수 있게 해줌
+
+```text
+    Document (최상위)
+          │
+        <html>
+       /      \
+   <head>    <body>
+     │        /    \
+  <title>   <h1>   <a>
+```
+
+
+- CTA(Call To Action) 버튼: 행동 유도 버튼. 방문자가 원하는 행동을 하도록 유도하는 버튼
+    - ⓔ 회원가입, 제출하기, 구독하기 등
+- 시맨틱 태그: 태그를 통해 그 안에 담긴 내용의 의미, 역할을 브라우저, 검색 엔진, 개발자에게 명확히 전달하는 HTML 태그
+
+- Flexbox: 1차원 레이아웃. 주로 카드나 메뉴처럼 나열되는 요소 정렬에 사용
+- Grid: 2차원 레이아웃. 엑셀처럼 격자(Grid) 형태로 배치
+
+- 앵커 링크: 클릭하면 페이지 내 특정 위치(id)로 이동하는 하이퍼링크
+- `alt` 속성: 이미지를 설명하는 텍스트. 이미지를 못 불러올 때 대신 보임
+
+- hover 효과: 마우스를 요소 위에 올렸을 때 변화하는 스타일
+- transition: 요소의 속성값이 변경될 때 부드럽게 전환되는 효과. 자연스러운 애니메이션 연출
+
+- defer 속성: HTML 문서의 파싱(렌더링)을 마친 후 자바스크립트 파일을 실행하도록 지시
+- var, const, let: 자바스크립트 변수 선언 키워드
+- onclick 속성: 클릭 이벤트 처리
+- addEventListener(): 특정 요소에 이벤트(클릭, 키보드 입력 등)를 감지하여 특정 함수가 실행되도록 연결하는 메서드
+
+- querySelector(): 문서에서 특정 CSS 선택자에 일치하는 첫 번째 요소를 선택
+- querySelctorAll(): 문서에서 특정 CSS 선택자에 일치하는 모든 요소를 선택
+
+- textContent: 요소의 텍스트 내용을 가져오거나 변경
+- innerHTML: 요소의 HTML 콘텐츠를 가져오거나 변경
+
+- classList.add: 클래스 추가
+- classList.remove: 클래스 제거
+- classList.toggle: 클래스 토글(있으면 제거, 없으면 추가)
+
+- click: 클릭 이벤트
+- submit: 제출 이벤트
+- scroll: 스크롤 이벤트
+- input: 입력 이벤트
+- event.preventDefault(): 이벤트의 기본 동작을 방지
+
+7. ES6
+- 템플릿 리터럴: 백틱(`)을 사용하여 문자열과 변수를 쉽게 결합하는 방법
+- 구조분해 할당: 객체나 배열에서 속성이나 요소를 개별 변수로 쉽게 추출하는 방법
+- map: 배열의 각 요소를 변환하여 새로운 배열을 생성
+- filter: 배열에서 특정 조건을 만족하는 요소만 추출하여 새로운 배열을 생성
+- forEach: 배열의 각 요소를 순회하며 특정 작업을 수행
+
+8. 비동기 처리
+- fetch: 네트워크 요청을 보내고 응답을 받는 데 사용되는 웹 API
+- async/await: 비동기 코드를 동기 코드처럼 보이게 작성할 수 있게 하는 문법
+- 엔드포인트: 서버가 제공하는 특정 기능이나 데이터에 접근할 수 있는 URL 주소
+

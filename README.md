@@ -1,6 +1,6 @@
 # 나를 소개하는 웹페이지 (Vanilla Web Portfolio)
 
-> 외부 라이브러리(React, Tailwind 등) 없이 순수 **HTML5, CSS3, ES6+ JavaScript**만으로 제작된 반응형 포트폴리오 웹사이트입니다.  
+> 외부 라이브러리(React, Tailwind 등) 없이 순수 **HTML5, CSS3, ES6+ JavaScript**만으로 반응형 포트폴리오 웹사이트를 구축하는 미션입니다. 
 > 웹 프론트엔드의 핵심인 **"사용자 이벤트 → 상태(State) 변경 → DOM 조작(화면 렌더링)"**의 흐름을 직접 구현했습니다.
 
 ---
